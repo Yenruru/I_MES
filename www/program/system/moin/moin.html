@@ -1,0 +1,85 @@
+<div ng-init="init();" class="kmi-layout-content moin-content"> <!-- 程式代號 -->
+
+	<!-- 程式內容 -->
+	<div class = "kmi-layout-main-content">
+		<div class = "kmi-layout-page">
+		
+			<!-- 登入工號label & text -->
+			<div class=lbl-userno>
+			<label ng-bind="'moin.userno' | translate" ></label>
+			<div class=txt-userno ng-bind="userInfo"></div>		
+			</div>
+			
+			<!-- 更換帳號按鈕 -->
+			<div class="kmi-button btn-change" ng-click="change()" style="width:80px">
+			<label ng-bind="'moin.change' | translate" ></label>
+			<div class="kmi-can-click"></div>
+			</div>	
+			
+			<!-- 分隔線 -->
+			<hr class="line-top">
+			
+			<!-- 工單 -->
+			<div class="kmi-text-fields">
+				<label class="label" ng-bind="'moin.mo' | translate" style="width:80px" ></label>
+				<input 
+					class="input" 
+					id='txt_mono' 
+					ng-model="mono"				
+					mdl-barcode="txt_mono_KeyPress;"
+					ng-readonly="mono_readonly">
+				</input>				
+			</div>
+			
+			<!-- 作業區域 -->
+			<div class="kmi-text-fields">
+				<label class="label" ng-bind="'moin.oparea' | translate" style="width:80px" ></label>
+				<div class="txt-oparea" ng-bind="oparea"></div>					
+			</div>
+			
+			<!-- 產品 -->			
+			<div class="kmi-text-fields">
+				<label class="label" ng-bind="'moin.prdno' | translate" style="width:80px" ></label>
+				<div class="txt-prdno" ng-bind="prdno"></div>					
+			</div>
+			
+			<!-- 作業站 -->			
+			<div class="kmi-text-fields">
+				<label class="label" ng-bind="'moin.opno' | translate" style="width:80px" ></label>
+				<div class="txt-opno" ng-bind="opno"></div>						
+			</div>
+			
+			<!-- 上工 Button -->
+			<div class="kmi-button btn-login" ng-click="login()" style="width:200px" >
+				<label ng-bind="'moin.login' | translate" ></label>
+				<div class="kmi-can-click"></div>
+			</div>						
+			
+			<!--  分隔線 -->
+			<div class = "border-top"></div> 
+			
+			<!-- 底部按鈕 -->
+			<div class="kmi-button-fields">
+				
+				<!-- 工單上工按鈕 -->
+				<div class="kmi-button btn-moin" style="width:80px">
+				<label ng-bind="'moin.moin' | translate" ></label>
+				</div>			
+				
+				<!-- 工單下工按鈕 -->
+				<div class="kmi-button btn-moout" ng-click="moout()" style="width:80px">
+				<label ng-bind="'moin.moout' | translate" ></label>
+				<div class="kmi-can-click"></div>
+				</div>
+				
+				<!-- 過帳按鈕 -->
+				<div class="kmi-button btn-Execute" ng-click="execute()" style="width:80px">
+				<label ng-bind="'moin.Execute' | translate" ></label>
+				<div class="kmi-can-click"></div>
+				</div>		
+				
+			</div>
+			
+		</div>	
+	</div>		
+</div>

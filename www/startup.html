@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <!-- title -->
+    <title>KMI</title>
+    <link rel="stylesheet" href="plugins/angular-material-lite/material-design-lite/material.min.css"/>
+    
+    <link rel="stylesheet" href="plugins/angular-material-lite/angular-material-lite.css"/>
+    <link rel="stylesheet" href="plugins/angularMDL/css/mdl-animation.css"/>
+    <link rel="stylesheet" href="plugins/angularMDL/css/mdl.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/kmi-client.css"/>
+    <!-- style -->
+    <style type="text/css">
+        .kmi-layout-page{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            flex-direction: column;
+        }
+        .kmi-text-fields--triangle .label>label:FIRST-CHILD{
+            background:#008595;
+        }
+        .kmi-text-fields--triangle .label>.triangle{
+            border-color: transparent transparent transparent #008595;
+        }
+        .text-fields-group{
+            margin: 0px 48px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- content 
+    <div id="container">
+        <div id="content">Connecting to Device</div>
+    </div>
+    -->
+    <div class="kmi-layout-content setting-content">
+        <div class="kmi-header-row">
+            <div class="header-title">設定MobileMiddleWare</div>
+            <div class="header-logo"></div>
+        </div>
+        <div class="kmi-layout-main-content">
+            <div class="kmi-layout-page" >
+                <div class="kmi-text-fields--triangle text-fields-group">
+					<div class="label">
+						<label>KMI伺服器IP</label>
+						<label class="triangle"></label>
+					</div>
+					<div class="input">
+						<input id="serverIp1" type="text" value="127"></input>
+						<input id="serverIp2" type="text" value="0"></input>
+						<input id="serverIp3" type="text" value="0"></input>
+						<input id="serverIp4" type="text" value="1"></input>
+					</div>
+                </div>
+            </div>
+            <div class="kmi-layout-footer">
+                <button id="confirm" class="mdl-button mdl-js-button mdl-button--fab mdl-shadow--custom mdl-button--custom1">
+                    <i class="material-icons">done</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script type="text/javascript" src="startup.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+</body>
+</html>

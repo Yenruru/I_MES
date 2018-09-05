@@ -1,0 +1,11 @@
+<div class="dialog-container mdl-shadow--8dp confirm-dialog" >
+    <div class="dialog-content">
+        <p ng-bind-html="dialog.content"></p>
+    </div>
+    <div class="dialog-button">
+        <button class="mdl-button mdl-js-button mdl-button--primary" ng-bind="'dialog.confirm'|translate" ng-click="dialog.confirm(dialog);">
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--accent" ng-bind="'dialog.cancel'|translate" ng-click="dialog.cancel(dialog);">
+        </button>
+    </div>
+</div>

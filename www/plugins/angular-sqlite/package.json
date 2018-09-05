@@ -1,0 +1,55 @@
+{
+  "name": "angular-sqlite",
+  "version": "0.1.0",
+  "description": "AngularJS SQLite module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reduardo7/angular-sqlite.git"
+  },
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "sqlite",
+    "client-side"
+  ],
+  "author": {
+    "name": "Eduardo Daniel Cuomo",
+    "email": "eduardo.cuomo.ar+github.angular-sqlite@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reduardo7/angular-sqlite/issues"
+  },
+  "homepage": "http://eduardocuomo.com.ar",
+  "gitHead": "2c53d8d617e8a3891a8628741ce65b1be21fc3b6",
+  "_id": "angular-sqlite@0.1.0",
+  "_shasum": "3f69efa1aa96b35abb568bc2da1b8086c1f57038",
+  "_from": "angular-sqlite@*",
+  "_npmVersion": "3.7.3",
+  "_nodeVersion": "5.9.1",
+  "_npmUser": {
+    "name": "reduardo7",
+    "email": "eduardo.cuomo.ar@gmail.com"
+  },
+  "dist": {
+    "shasum": "3f69efa1aa96b35abb568bc2da1b8086c1f57038",
+    "tarball": "https://registry.npmjs.org/angular-sqlite/-/angular-sqlite-0.1.0.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "reduardo7",
+      "email": "eduardo.cuomo.ar@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/angular-sqlite-0.1.0.tgz_1462043937667_0.6788192251697183"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angular-sqlite/-/angular-sqlite-0.1.0.tgz"
+}

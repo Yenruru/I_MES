@@ -1,0 +1,59 @@
+    div:focus {outline:none !important;} /*disable blue border on click menu bar*/
+    * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }/*disable blue cover on click menu bar in mobile browser*/
+    button, select, html, textarea, input {
+        font-family: Roboto, "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+    }
+    .mdl-cover{
+        height : 100%;
+        width : 100%;
+        background-image : url('../../../image/bg_gradient_piclogo1080x1920.png');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .index-cover{
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    md-input-container.md-input-focused label:not(.md-no-float), 
+    md-input-container.md-input-has-placeholder label:not(.md-no-float), 
+    md-input-container.md-input-has-value label:not(.md-no-float) {
+        -webkit-transform: translate3d(0, 6px, 0) scale(1);
+        transform: translate3d(0, 6px, 0) scale(1);
+    }
+    .md-button, md-switch, .md-list-item-inner > P{
+        font-size: 16px;
+    }
+    md-input-container{
+        margin : 18px 0px 0px 0px;
+    }
+    md-list-item > md-icon:first-child:not(.md-avatar-icon), md-list-item .md-list-item-inner > md-icon:first-child:not(.md-avatar-icon) {
+        margin-right: 16px;
+    }
+    ._md-datepicker-floating-label._md-datepicker-has-calendar-icon > label:not(.md-no-float):not(.md-container-ignore) {
+        right: 65px;
+        left: auto;
+        width: calc(100% - 84px);
+    }
+    .md-icon-button + .md-datepicker-input-container {
+        margin-left: 0px;
+    }
+    md-sidenav {
+         max-width: 250px;
+    }
+    [scroll] {
+      position:fixed;
+      top:0;
+    }
+    
+    @media (max-width: 456px) {
+      md-sidenav {
+        width: calc(100% - 180px);
+        min-width: calc(100% - 180px);
+        max-width: calc(100% - 180px); 
+      } 
+    }

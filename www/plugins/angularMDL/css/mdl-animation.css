@@ -1,0 +1,150 @@
+/**load Program********************************************************************************************/
+.load-program.ng-enter{
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  Z-index : 2;
+}
+.load-program.ng-leave{
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  Z-index : 1;
+}
+
+.load-program.ng-enter{
+  opacity: 0;
+  -webkit-transform:translate3d(60px,0, 0);
+  -moz-transform:translate3d(60px, 0, 0);
+  transform:translate3d(60px, 0, 0);
+}
+
+.load-program.ng-enter-active {
+  opacity: 1;
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+
+.load-program.ng-leave {
+  opacity: 1;
+  
+}
+.load-program.ng-leave-active {
+  opacity: 0.9;
+
+}
+/****leave Program*******************************************************************************************/
+.leave-program.ng-enter{
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  Z-index : 0;
+}
+.leave-program.ng-leave{
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  Z-index : 2;
+}
+
+.leave-program.ng-enter{
+  opacity: 0.9;
+}
+
+.leave-program.ng-enter-active {
+  opacity: 1;
+}
+
+.leave-program.ng-leave {
+  opacity: 1;
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+}
+.leave-program.ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translate3d(60px , 0px, 0);
+  -moz-transform:translate3d(60px, 0px, 0);
+  transform:translate3d(60px, 0px, 0);
+}
+
+
+/****Gallery*******************************************************************************************/
+.Gallery-Content.ng-hide{
+  -webkit-transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+    
+  opacity: 0;
+  
+  -webkit-transform:scale3d(.8 , .8, .8) translate3d(0, 200px, 0);
+  -moz-transform:scale3d(.8, .8, .8) translate3d(0, 200px, 0);
+  transform:scale3d(.8, .8, .8) translate3d(0, 200px, 0);
+}
+
+.Gallery-Content {
+  -webkit-transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+    
+  opacity: 1;
+  -webkit-transform:scale3d(1 , 1, 1) translate3d(0, 0, 0);
+  -moz-transform:scale3d(1, 1, 1) translate3d(0, 0, 0);
+  transform:scale3d(1, 1, 1) translate3d(0, 0, 0);
+}
+/**Dialog*******************************/
+.dialog-background >.dialog-lay> .dialog-container{
+  -webkit-transition:all .2s ease-in-out;
+  -moz-transition:all .2s ease-in-out;
+  -o-transition:all .2s ease-in-out;
+  transition:all .2s ease-in-out;
+
+  opacity: 1;
+  -webkit-transform:scale3d(1 , 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+.dialog-background.ng-hide >.dialog-lay> .dialog-container{
+  opacity: 0;
+  -webkit-transform:scale3d(.5 , .5, .5);
+  -moz-transform:scale3d(.5, .5, .5);
+  transform:scale3d(.5, .5, .5);
+}
+/**Loading***********************************/
+.Loading-contain, .LoadingMsg{
+  -webkit-transition:all .3s ease-in-out;
+  -moz-transition:all .3s ease-in-out;
+  -o-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+  
+  opacity: 1;
+  -webkit-transform:scale3d(1 , 1, 1);
+  -moz-transform:scale3d(1, 1, 1);
+  transform:scale3d(1, 1, 1);
+}
+.Loading-contain.ng-hide, .LoadingMsg.ng-hide {
+
+  opacity: 0;
+  -webkit-transform:scale3d(.5 , .5, .5);
+  -moz-transform:scale3d(.5, .5, .5);
+  transform:scale3d(.5, .5, .5);
+}

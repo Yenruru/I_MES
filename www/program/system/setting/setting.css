@@ -1,0 +1,125 @@
+.setting-content{
+    background-color: #f7f7f7;
+}
+.setting-content .kmi-layout-main-content{
+    display: flex;
+}
+.setting-content .setting-sidebar-left{
+    padding: 16px;
+    height: 100%;
+    overflow: auto;
+    flex: 1;
+}
+.setting-content .setting-sidebar-right{
+    padding:16px;
+    width: 185px;
+}
+.setting-content .kmi-text-fields--triangle>input{
+    text-align: center;
+}
+
+.text-fields-group1 .label>label:FIRST-CHILD{
+    background-color : #66bc84;    	
+}
+.text-fields-group1 .label>.triangle{
+    border-color: transparent transparent transparent #66bc84;   
+}
+.text-fields-group2 .label>label:FIRST-CHILD{
+    background-color : #66bc84;    
+}
+.text-fields-group2 .label>.triangle{
+    border-color: transparent transparent transparent #66bc84;   
+}
+.text-fields-group3 .label>label:FIRST-CHILD{
+    background-color : #e2b446;    
+}
+.text-fields-group4{
+	flex-direction: column;
+	height: 64px;
+	align-items: flex-start;
+	background:none;
+	flex: 1;
+}
+.text-fields-group4 .input> input{
+	background: #fff0ac;
+    border-radius: 0 4px 4px 4px;
+}
+.text-fields-group4 .label>label:FIRST-CHILD{
+    background-color : #e2b446;
+	border-radius: 4px 4px 0 0;
+}
+.text-fields-group4 .label>.triangle{
+    border-color: transparent transparent transparent #e2b446;   
+}
+.setting-content .fields-ip > input{
+    flex : 1;
+    /*width: 150px;*/
+}
+.switch-ip{
+    box-sizing: border-box;
+    font-size: 20px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+    align-items: center;
+    position: relative;
+    background-color : white;
+    
+    border-radius: 4px 4px 4px 4px;
+}
+
+.switch-ip .triangle{
+    position:relative;
+    left: 0 px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #378fcb transparent transparent transparent;
+    border-width: 32px 0 0 36px;
+}
+.switch-ip .switch-ip__fixed{
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px 0px 0px 4px;
+    text-align: center;
+
+}
+.switch-ip .switch-ip__dhcp{
+    height: 32px;
+    line-height: 32px;
+    border-radius: 0 4px 4px 0;
+    text-align: center;
+}
+
+.switch-ip .is-selected{
+    position:relative;
+    background-color: #378fcb;
+    color : white;
+}
+
+@media (max-width: 600px) {
+    .setting-content .kmi-layout-main-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .setting-content .setting-sidebar-right{
+        display: flex;
+        flex-direction: row;
+        padding-right:88px;
+        width: initial;
+    }
+    .kmi-button.setting-right-btn{
+        flex:1;
+    }
+}
+.rdo-lotno{
+	position:absolute;
+	left: 60%; 
+    top: 15%;
+}
+.rdo-carno{
+	position:absolute;
+	left: 60%; 
+    top: 15%;
+}

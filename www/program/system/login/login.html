@@ -1,0 +1,54 @@
+<div ng-init="init();" class="login-content kmi-layout-content">
+        <div class="login-title-panel phone"></div>
+	    <div class="login-fields-panel" ng-show="showLogin" id="loginPanel">
+            
+            <!-- 作業區域Text & Label -->
+            <input class="kmi-text-fields" id="txtoparea" type="text" 
+			    ng-model="oparea" 
+				mdl-barcode="opareaKeyPress"
+				placeholder="{{'Login.oparea'|translate}}"
+				ng-model-options="{updateOn : 'change blur'}">
+            </input>
+
+            <!-- 作業站Text & Label -->            
+         	<input class="kmi-text-fields" id="txtopno" type="text" 
+			    ng-model="opno" 
+				mdl-barcode="opnoKeyPress"
+				placeholder="{{'Login.opno'|translate}}"
+				ng-model-options="{updateOn : 'change blur'}">
+            </input>
+
+            <!-- 工號Text & Label -->
+            <input class="kmi-text-fields" id="account" type="text" 
+			    ng-model="account" 
+				mdl-barcode="accountKeyPress"
+				placeholder="{{'Login.account'|translate}}"
+				ng-model-options="{updateOn : 'change blur'}">
+            </input>
+
+            <!-- 密碼Text & Label -->
+            <input class="kmi-text-fields" id="password" type="password"
+			    ng-model="password"
+				mdl-barcode="passwordKeyPress"
+				placeholder="{{'Login.password'|translate}}"
+				ng-model-options="{updateOn : 'change blur'}">
+            </input>
+       
+            <button class="kmi-button--cis login-btn-login" ng-click="login();">
+                <label ng-bind="'Login.login' | translate"></label>
+                <div class="kmi-can-click"></div>
+            </button>
+			
+            <button class="kmi-button--cis login-btn-login" ng-click="setting();">
+                <label ng-bind="'Login.setting' | translate"></label>
+                <div class="kmi-can-click"></div>				
+            </button>       
+			
+			<div class="login-digiwin-logo"></div>
+            <div class="login-digiwin-copyright">
+                <div>Copyright © Data Systems. All rights reserved.</div>
+                <div>© 艾碼科技 著作權所有，並保留一切權利。</div>
+            </div>
+			
+        </div>
+</div>

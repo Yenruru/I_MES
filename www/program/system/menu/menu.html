@@ -1,0 +1,6 @@
+<div class="kmi-menu-tile {{item.name}}"
+    ng-repeat="item in menuList | orderBy: 'order' | filter: {isShow : true} track by $index" 
+    ng-click="menuClick(item, $event);" ng-class="{'is-selected' : item.name == $root.currentState}">
+    <label ng-bind="item.title | translate" ></label>
+    <div class="kmi-can-click"></div>
+</div>

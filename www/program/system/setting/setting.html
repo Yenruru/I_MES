@@ -1,0 +1,179 @@
+<div ng-init="init();" class="kmi-layout-content setting-content">
+    <div class="kmi-header-row">
+        <div class="kmi-side-btn left" ng-click="back();">
+            <i class="material-icons">&#xE408;</i>
+            <div class="kmi-can-click"></div>
+        </div>
+        <div class="header-title" ng-bind="'Setting.title' | translate"></div>
+        <div class="header-logo"></div>
+    </div>
+    <div class="kmi-layout-main-content">
+        <div class="kmi-layout-page setting-sidebar-left">
+            <div class="kmi-text-fields--triangle fields-ip">
+                <!--<div class="label">
+                    <label ng-bind="'Setting.server.ip' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input ng-repeat="ip in serverIp track by $index" type="text" mdl-calculater="serverIp[$index]" ></input>
+                </div>
+				-->
+				<div class="label">
+                    <label ng-bind="'Setting.server.ip' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input" style="background-color:#fff0ac;">
+                    <input type="text" ng-model="config.server.ip"></input>
+                </div>
+            </div>
+            <div class="kmi-text-fields--triangle">
+                <div class="label">
+                    <label ng-bind="'Setting.server.port' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input" style="background-color:#fff0ac;">
+                    <input type="text" mdl-calculater="config.server.port" ></input>
+                </div>
+            </div>
+			<!--
+			<div class="kmi-text-fields--triangle fields-ip">
+                <div class="label">
+                    <label ng-bind="'Setting.server.ip' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input ng-repeat="ip in serverIp track by $index" type="text" mdl-calculater="serverIp[$index]" ></input>
+                </div>
+            </div>
+			-->
+            <!-- 
+            <div class="kmi-text-fields--triangle" ng-disabled="isCordova">
+                <div class="label">
+                    <label ng-bind="'Setting.server.timeout' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input ng-disabled="isCordova" type="text" mdl-calculater="config.server.timeout"></input>
+                    <label class="tip"  ng-bind="'Setting.second' | translate"></label>
+                </div>
+            </div>
+            <div class="kmi-text-fields--triangle  text-fields-group2">
+                <label class="">預設登入使用者</label>
+                <label class="triangle"></label>
+                <input type="text" ng-model="config.setting.account"></input>
+            </div>
+            <div class="kmi-text-fields--triangle  text-fields-group2">
+                <label>密碼設定</label>
+                <label class="triangle"></label>
+                <input type="password" ng-model="config.setting.password"></input>
+            </div>
+            <div class="kmi-text-fields--triangle  text-fields-group2">
+                <div class="label">
+                    <label ng-bind="'Setting.logout.timeout' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input type="text" mdl-calculater="config.setting.timeout"></input>
+                    <label class="tip">分</label>
+                </div>
+            </div>-->
+            <div class="kmi-text-fields--triangle text-fields-group3" ng-hide="config.setting.platform == 'MES'" disabled="disabled">
+                <div class="label">
+                    <label ng-bind="'Setting.companyID' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input type="text" ng-model="config.setting.companyId" ng-readonly=true disabled="disabled"></input>
+                </div>
+            </div>
+            <!--<div class="kmi-text-fields--triangle text-fields-group3">
+                <div class="label">
+                    <label ng-bind="'Setting.RefreshTime' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input type="text" mdl-calculater="config.setting.RefreshTime" ></input>
+                    <label class="tip">秒</label>
+                </div>
+            </div> -->
+            <div class="kmi-text-fields--triangle text-fields-group3"  disabled="disabled">
+                <div class="label">
+                    <label ng-bind="'Setting.Platform' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input type="text" ng-model="config.setting.platform" disabled="disabled"></input>
+                </div>
+            </div>
+			<div class="kmi-text-fields--triangle text-fields-group4">
+                <div class="label">
+                    <label ng-bind="'Setting.hostName' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input type="text" ng-model="config.setting.hostName"></input>
+                </div>
+            </div>
+            <!-- 
+			<div class="kmi-text-fields--triangle text-fields-group4">
+                <div class="label">
+                    <label ng-bind="'Setting.cusHostName' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input type="text" ng-model="config.setting.cusHostName"></input>
+                </div>
+            </div>
+           
+			<div class="kmi-text-fields--triangle text-fields-group4">
+                <div class="label">
+                    <label ng-bind="'Setting.sfcHostName' | translate"></label>
+                    <label class="triangle"></label>
+                </div>
+                <div class="input">
+                    <input type="text" ng-model="config.setting.sfcHostName"></input>
+                </div>
+            </div>
+            
+            <div class="kmi-text-fields--triangle text-fields-group3">
+                <label ng-bind="'Setting.workTech' | translate"></label>
+                <label class="triangle"></label>
+                <input type="text" ng-model="config.setting.techWork"></input>
+            </div>
+            <div class="kmi-text-fields--triangle text-fields-group3">
+                <label ng-bind="'Setting.sysIntegrate' | translate"></label>
+                <label class="triangle"></label>
+                <input type="text" ng-model="config.setting.sysIntegrate"></input>
+            </div>
+            -->
+		</div>
+			
+        <div class="kmi-layout-page setting-sidebar-right">
+            <div class="kmi-button setting-right-btn" ng-click="loadLoaclizationList();">
+                <label ng-bind="'Setting.'+currentUse | translate"></label>
+                <div class="kmi-can-click"></div>
+            </div>
+            <div class="kmi-button setting-right-btn" ng-click="connectionTest();">
+                <label ng-bind="'Setting.test' | translate"></label>
+                <div class="kmi-can-click"></div>
+            </div>
+            <!-- 
+			
+            <div class="kmi-button setting-right-btn" disabled>
+                <label>設備報工</label>
+            </div>
+            <div class="kmi-button setting-right-btn" disabled>
+                <label>多餘數自動帶入</label>
+            </div>
+            <div class="kmi-button setting-right-btn" disabled>設備狀態</div>
+            <div class="kmi-button setting-right-btn" disabled>自動更新</div>
+            <div class="kmi-button setting-right-btn" disabled>整批製令暫停</div>
+             -->
+            <div class="kmi-layout-footer">
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-shadow--custom mdl-button--custom1" ng-click="confirm();">
+                    <i class="material-icons">done</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div> 

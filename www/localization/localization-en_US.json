@@ -1,0 +1,63 @@
+{
+    "Menu" : "menu",
+    "Logout" : "Logout",
+    "dialog" : {
+        "confirm" : "confirm",
+        "cancel" : "cancel"
+    },
+    "error" : {
+        "connectRefused": "與伺服器連線出錯，請檢查您的網路連線。",
+        "connectNotify" : "與伺服器連線有異狀。",
+        "sessionTimeout": "登入已逾時，請重新登入。"
+    },
+    "Login" : {
+        "title" : "Please Login",
+        "msg" : "Please input account/password",
+        "login" : "Login",
+        "setting":"Setting",
+        "account" : "User",
+        "password" : "Password",
+        "error" : {
+            "ap" : "account/password error, please confirm!",
+            "login" : "login failure!"
+        }
+    },
+    "home" : {
+        "title" : "WorkReport",
+        "setting" : "Setting",
+        "logout" : "Logout",
+        "exit" : "Exit",
+        "versionInfo" : "Version"
+    },
+    "Setting" : {
+        "second":"sec",
+        "title" : "Setting",
+        "fixedIP":"fiexed IP",
+        "dhcpIP":"DHCP",
+        "client":{
+            "ip":"Client IP",
+            "mask":"Mask",
+            "geteway":"Gateway"
+        },
+        "server":{
+            "ip" : "Server IP",
+            "port" : "Port",
+            "timeout":"Time out"
+        },
+        "alwaysOn" : "螢幕常亮",
+        "machineNotifi" : "機台提醒",
+        "logout.timeout": "Logout",
+        "companyID":"Company ID",
+        "machine":"Machine Code",
+        "workTech":"工件技術功能",
+        "sysIntegrate":"系統整合",
+        "materialWarin" : "物料警示數量",
+        "RefreshTime" : "畫面更新頻率",
+        "localizationList":"Localization",
+        "zh_TW" : "Chinese(Traditional)",
+        "en_US" : "English",
+        "msg":{
+            "RefreshTimeZero":"畫面更新頻率不得為0"
+        }
+    }
+}

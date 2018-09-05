@@ -1,0 +1,44 @@
+<div class="dialog-container  mdl-shadow--8dp" style="max-height: 100%;">
+    <div>
+        <div style="padding:10px 10px 0px 10px;width:250px;text-align: center;">
+            <div class="mdl-datepicker-title" ng-click="dialog.datePacker.gotoToday();">
+              <div style="color:rgba(255,255,255,0.7);margin-bottom: 5px;">{{dialog.datePacker.pickDate | date : 'yyyy'}}</div>
+              <div style="font-size: 24px;"  ng-bind="dialog.datePacker.displayPickDate();"></div>
+            </div>
+            <div class="mdl-datepicker-month"  ng-hide="dialog.datePacker.isYearList">
+                <button class="mdl-button mdl-js-button mdl-button--icon" 
+                    style="position: absolute;left:-5px;top:-5px;"
+                    ng-click="dialog.datePacker.date.setMonth(dialog.datePacker.date.getMonth()-1);dialog.datePacker.monthDays();">
+                  <i class="material-icons">keyboard_arrow_left</i>
+                </button>
+                <span ng-click="dialog.datePacker.showYearList();" ng-bind="dialog.datePacker.displayMonth();"></span>
+                <button class="mdl-button mdl-js-button mdl-button--icon" 
+                    style="position: absolute; right:-5px;top:-5px;"
+                    ng-click="dialog.datePacker.date.setMonth(dialog.datePacker.date.getMonth()+1);dialog.datePacker.monthDays();">
+                  <i class="material-icons">keyboard_arrow_right</i>
+                </button>
+            </div>
+            <div style="text-align: left;height:245px;" ng-hide="dialog.datePacker.isYearList">
+                <div ng-repeat="week in dialog.datePacker.weekdays" class="mdl-datepicker-week">
+                    {{week}}
+                </div><br/>
+                <div ng-repeat-start="day in dialog.datePacker.dayArray track by $index" 
+                    class = "mdl-datepicker-date" ng-disabled="day.isDisabled"
+                    ng-class="dialog.datePacker.dayClass(day);"
+                    ng-click="dialog.datePacker.pick(day);">
+                    {{day.value}}
+                </div><br ng-if="($index+1)%7==0" ng-repeat-end/>
+            </div>
+            <div ng-show="dialog.datePacker.isYearList" style="height: 265px;overflow: auto;">
+                <div ng-repeat="month in dialog.datePacker.monthArray track by $index" 
+                    class = "mdl-datepicker-list-month">
+                    {{month.year +' '+month.month}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display:flex; justify-content : flex-end;padding: 0 8px 8px 0;">
+          <button type="button" class="mdl-button mdl-js-button mdl-button--primary" ng-click="dialog.confirm(dialog);" ng-bind="'dialog.confirm' | translate"></button>
+          <button type="button" class="mdl-button" ng-click="dialog.cancel(dialog);" ng-bind="'dialog.cancel' | translate"></button>
+    </div>
+</div>

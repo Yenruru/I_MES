@@ -1,0 +1,42 @@
+<div class="dialog-container  mdl-shadow--8dp mdl-layout--fixed-header calculater-content"  style="max-height: 100%;">
+  <div class="kmi-header-row">
+      <div class="header-title" ng-bind="dialog.calculater.options.title | translate"></div>
+      <div class="kmi-side-btn right" ng-click="dialog.cancel();">
+          <i class="material-icons">clear</i>
+          <div class="kmi-can-click"></div>
+      </div>
+  </div>
+  <div class="kmi-layout-main-content">
+    <div class="kmi-layout-page"> 
+        <div class="display-content">
+            <input class="display" ng-model="dialog.calculater.numDisplay" readonly="readonly"></input>     
+        </div>
+        <div style="display:flex;">
+        <div class="numBtn-content">
+            <div ng-repeat="numBtn in dialog.calculater.numBtnArray" class="numBtn-item" ng-click="dialog.calculater.addNum(numBtn);">
+                <span>{{numBtn}}</span>
+                <div class="kmi-can-click"></div>              
+            </div>
+            <div class="numBtn-item zero-btn" ng-click="dialog.calculater.addNum('0');">
+                <span>0</span>
+                <div class="kmi-can-click"></div> 
+            </div>
+            <div class="numBtn-item" ng-click="dialog.calculater.addNum('.');" ng-disabled="!dialog.calculater.options.decimal">
+                <span>.</span>
+                <div class="kmi-can-click"  ng-show="dialog.calculater.options.decimal"></div>
+            </div>
+        </div>
+        <div class="control-content">
+            <div class="control-btn" ng-click="dialog.calculater.deleteNum();">
+                <i class="material-icons">backspace</i>
+                <div class="kmi-can-click"></div>
+            </div>  
+            <div class="control-btn" ng-click="dialog.calculater.confirmNum(dialog.confirm);" style="flex:1;line-height: 120px;">
+                <i class="material-icons">&#xE31B;</i>
+                <div class="kmi-can-click"></div>
+            </div>  
+        </div>
+        </div>
+    </div>
+  </div>
+</div>

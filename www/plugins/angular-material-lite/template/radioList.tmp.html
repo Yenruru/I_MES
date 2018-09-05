@@ -1,0 +1,20 @@
+<div class="dialog-container mdl-shadow--8dp mdl-layout--fixed-header" ng-init="init();"  style="background-color: #fafafa">
+  <div class="kmi-header-row">
+      <div class="header-title" ng-bind="dialog.title | translate"></div>
+      <div class="kmi-side-btn right" ng-click="dialog.back();">
+          <i class="material-icons">clear</i>
+          <div class="kmi-can-click"></div>
+      </div>
+  </div>
+  <div class="kmi-layout-main-content">
+    <div class="kmi-layout-page"> 
+        <div class="mdl-radio-list">
+          <div class="mdl-radio-list__item"  ng-repeat="item in dialog.itemList track by $index" ng-click="dialog.itemClick(item, $event);" style="position : relative;"
+            ng-class="{'is-selected':item[dialog.code]===dialog.selectCode}">
+            <div class="mdl-radio-list__title" ng-bind="item[dialog.label]"></div>
+            <div class="kmi-can-click"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

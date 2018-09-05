@@ -1,0 +1,35 @@
+{
+    "appName" : "KMI_Client_YOKE",
+    "picURL" : "DCIM/KMIClient_YOKE/",
+    "applicationId" : "dca15348-80a9-42e3-b47f-4e9390b58a01",
+    "appVersion" : "1.0.0.0",
+    "mdssessionno" : "",
+    "client" : {
+        "ip" : "127.0.0.1",
+        "gateway" : "10.40.71.254",
+        "mask" : "255.255.254.0"
+    },
+    "server" : {
+        "ip" : "",
+        "port" : "80",
+        "name" : "",
+        "timeout":0
+    },
+    "setting" : {
+        "lang":"zh_TW",
+        "openSSE" : false,
+        "machineNot" : false,
+        "ScreenOn" : true,
+        "isDoStockIn": false,
+        "rememberAP":true,
+        "companyId" : "YOKE",
+        "environment" : "Production",
+		"platform" : "MES 6.0.3.5",
+        "account": "",
+        "password" : "",
+        "timeout": 0,
+        "RefreshTime":60,
+		"hostName":"",
+		"logininfo" : ""
+    }
+}

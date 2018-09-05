@@ -1,0 +1,9 @@
+<div class="mdl-layout mdl-js-layout  mdl-layout--fixed-header"  style="background-color: black" >
+    <main class="mdl-layout__content" style="display: flex;flex-direction:column;align-items:center;">
+        <div class="gallery-header">
+            <img class="material-icons" style="padding:0 15px;width: 32px;height: 32px;" src="image/icons/ic_keyboard_backspace_white_24px.svg" ng-click="gallery.hide()"></img>
+            <span style="color:white;font-size:18px;padding-left: 0px;">{{gallery.title}}</span>
+        </div>
+        <img ng-src="{{gallery.url}}" style="object-fit: contain;flex:1; width: 100%;">
+    </main>
+</div>

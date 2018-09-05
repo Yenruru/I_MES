@@ -1,0 +1,464 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+.mdl-navigation__link{
+  font-size : 18px;
+  cursor: pointer;
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+html, body{
+    font-size: 16px;
+    font-family: Roboto, "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+}
+p, textarea {
+    font-size: 16px;
+    font-family: Roboto, "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+}
+.mdl-tabs__tab{
+    font-size: 16px;
+}
+.mdl-button{
+    font-size: 16px;
+    font-family: Roboto, "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+}
+.mdl-menu__item{
+    font-size: 16px;
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label, .mdl-textfield--floating-label.is-dirty .mdl-textfield__label, .mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+    /*color: #3f51b5;*/
+    font-size: 16px;
+    top: 2px;
+    visibility: visible;
+    font-family: Roboto, "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+}
+.mdl-textfield--floating-label.is-invalid .mdl-textfield__label{
+    font-size : 16px;
+}
+.mdl-textfield__error{
+    font-size: 16px;
+}
+fieldset[disabled] .mdl-textfield .mdl-textfield__label, .mdl-textfield.is-disabled.is-disabled .mdl-textfield__label {
+    color: rgba(0,0,0,.5);
+}
+fieldset[disabled] .mdl-textfield .mdl-textfield__input, .mdl-textfield.is-disabled .mdl-textfield__input {
+    color: rgba(0,0,0,.5);
+}
+.mdl-layout__title, .mdl-layout-title, .mdl-button, .mdl-textfield__input {
+    font-family: Roboto, "Helvetica Neue", "Microsoft JhengHei", sans-serif;
+}
+.dialog-background{
+    height:100%;
+    width:100%;
+    /*background-color:rgba(0,0,0,0.38);*/
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+.dialog-lay{
+    height:100%;
+    width:100%;
+    
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    position: absolute;
+    
+    background: rgba(0,0,0,0.38);
+}
+
+.dialog-container{
+    position : relative;
+    min-width : 240px;
+    max-width : 80%;
+    max-height:80%;
+    background-color: white;
+    border-radius: 5px;
+    
+    display:flex;
+    flex-direction:column;
+}
+.dialog-content{
+    padding: 24px 24px 0 24px;
+    margin-bottom: 44px;
+    box-sizing: border-box;
+}
+.dialog-content-icon{
+    padding: 24px 24px 0 24px;
+    margin-bottom: 44px;
+    margin-left:53px;
+    box-sizing: border-box;
+}
+.dialog-button{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    padding: 0 16px 8px 16px;
+}
+.dialog-icon-information{
+	position:fixed;
+	width:64px;
+ 	height:64px; 
+ 	top:15px;
+ 	left:10px;
+	background-image: url('../../image/Info.png');
+    background-size:64px 64px;
+}
+.dialog-icon-exclamation{
+	position:fixed;
+	width:64px;
+ 	height:64px; 
+ 	top:15px;
+ 	left:10px;
+	background-image: url('../../image/exclamation.png');
+    background-size:64px 64px;
+}
+.dialog-icon-error{
+	position:fixed;
+	width:64px;
+ 	height:64px; 
+ 	top:15px;
+ 	left:10px;
+	background-image: url('../../image/error.png');
+    background-size:64px 64px;
+}
+.dialog-container .mdl-layout__header{
+    border-radius : 5px 5px 0px 0px;
+}
+.dialog-container .mdl-layout__header-row{
+    padding-left:0px; 
+}
+.mdl-layout__content{
+    height: 100%;
+}
+.page-content.row-content{
+    /*height: 100%;*/
+    /*
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap; 
+    */
+}
+.mdl-navigation button{
+    font-size:16px;
+    color:white;
+}
+.mdl-ripple-effect-content{
+    position: absolute;
+    top : 0;
+    
+    overflow: hidden;;
+    height: 100%;
+    width: 100%;
+}
+div.mdl-data-table{
+   border-left-width: 0px;
+   border-right-width: 0px;
+   font-size: 16px;
+}
+div.mdl-data-table-thead>div{
+    display:flex;
+    font-size:16px;
+    flex-direction:row;
+    justify-content : space-between;
+    flex-wrap : wrap;
+    border-bottom: rgba(0,0,0,0.2) 0.5px solid;
+    align-items : center;
+    padding: 10px 0px 10px 5px;
+}
+div.mdl-data-table-th{
+    padding : 0px 10px;
+    overflow: hidden;
+}
+div.mdl-data-table-tbody .mdl-data-table-column-content{
+    display:flex;
+    font-size:16px;
+    flex-direction:row;
+    justify-content : space-between;
+    flex-wrap : wrap;
+    border-bottom: rgba(0,0,0,0.2) 0.5px solid;
+    align-items : center;
+    padding: 10px 0px 10px 5px;
+}
+div.mdl-data-table-td{
+    padding : 0px 10px;
+    overflow: hidden;
+}
+.mdl-datepicker-title{
+    background-color: #3E4EB8;
+    width: 230px;
+    height: 40px;
+    margin: -10px -10px 10px -10px;
+    border-radius: 4px 4px 0 0;
+    color: white;
+    text-align: left;
+    padding: 10px 20px 20px 20px;
+    cursor: pointer;
+}
+@media (max-height: 360px) {
+    .mdl-datepicker-title{
+        display: none;
+    } 
+}
+.mdl-datepicker-month{
+    position: relative;
+    margin-bottom: 10px;
+    font-size : 13pt;
+    font-weight: bold;
+    color:black;
+}
+.mdl-datepicker-week{
+    display: inline-block;
+    vertical-align: text-top;
+    text-align: center;
+    
+    width:calc(100% / 7);
+    height: 35px;
+    line-height: 30px;
+    
+    color:#b3b3b3;
+    font-size : 13pt;
+}
+.mdl-datepicker-date{
+    display: inline-block;
+    vertical-align: text-top;
+    text-align: center;
+    
+    width:calc(100% / 7);
+    height: 35px;
+    line-height: 33px;
+    font-size : 13pt;
+    color:black;
+    cursor: pointer;
+}
+
+.mdl-datepicker-date.is-checked{
+    background-color:rgb(255,64,129);
+    border-radius: 100%;
+    color:white;
+}
+.mdl-datepicker-date[disabled]{
+    color:#b3b3b3;
+    cursor: auto;
+}
+
+.mdl-datepicker-date.mdl-datepicker-date__today{
+    color:#3E4EB8;
+    font-weight: bold;
+}
+.mdl-datepicker-date.mdl-datepicker-date__today.is-checked{
+    color:white;
+}
+.mdl-datepicker-button{
+    color:#2196f3;
+}
+.mdl-datePicker-input{
+    position: absolute;
+    top : 20px;
+}
+.mdl-datePicker-input > span{
+    float : left;
+    margin-top : 6px;
+}
+.mdl-datePicker-input > span > i{
+    float : left;
+    margin-top : -2px;
+}
+.mdl-checkbox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.page-refresh{
+    display:flex;
+    justify-content:center; 
+    align-items:center;
+    flex-direction:column;
+    position: absolute;
+    width:100%;
+    height: 48px;
+    box-size : box-size;
+    padding-bottom : 8px;
+    z-index:2;
+}
+.page-refresh__icon{
+    border-radius : 22px;
+    padding:4px;
+    background-color: white;
+    display:flex;
+}
+.page-refresh__icon>i{
+    font-size: 36px;
+    color : #ff4081;
+}
+.mdl-textfield__icons{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    color:rgba(0,0,0,.26);
+}
+.mdl-textfield--floating-label.is-focused .mdl-textfield__icons, 
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__icons, 
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__icons{
+    color:#3f51b5;
+}
+.dialog-container .mdl-layout__header-row{
+    padding-right: 16px;
+}
+.dialog-title-button{
+    cursor: pointer;
+    position: relative;
+}
+.mdl-layout__bottom-panel{
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 8px;
+}
+.mdl-dashboard{
+    
+}
+.mdl-dashboard .mdl-dashboard-cicle{
+    background: white;
+    border-radius: 6px 6px 0 0;
+    margin: 4px 4px 0 4px;
+}
+.mdl-dashboard .mdl-dashboard-bottom{
+    border-radius: 0 0 4px 4px;
+    height: 8px;
+    width: calc(100% - 8px);
+    background: #68bd84;
+    margin: 0 4px 8px 4px;
+}
+.mdl-dashboard .mdl-dashboard-label{
+    width:100%;
+    text-align: center;
+    font-size:16px;
+}
+
+.mdl-dashboard.is-warn .mdl-dashboard-cicle{
+    border:2px #db4b3c solid;
+}
+.mdl-dashboard.is-warn .mdl-dashboard-bottom{
+    background: #db4b3c;
+}
+
+.mdl-piechart{
+    text-align: center;
+}
+.dialog-container.calculater-content .kmi-header-row{
+    color: gray;
+    justify-content: flex-start;
+    padding-left: 8px;
+}
+.calculater-content .display-content{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background: white;
+    position: relative;
+    border-radius: 4px;
+}
+.calculater-content .display{
+    text-align: right;
+    height: 100%;
+    border: 0px;
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+    padding-right: 24px;
+    box-sizing: border-box;
+    background: transparent;
+    color:gray;
+}
+.calculater-content .control-btn{
+    position: relative;
+    
+}
+.calculater-content .numBtn-content{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px 0 8px 8px;
+    box-sizing: border-box;
+    flex: 1;
+}
+.numBtn-item{
+    width: calc(100% / 3);
+    text-align: center;
+    height: 40px;
+    line-height:40px;
+    position: relative;
+    color:gray;
+}
+.calculater-content .control-content{
+    display: flex;
+    width:48px;
+    flex-direction: column;
+    padding: 8px 8px 8px 0;
+    text-align: center;
+    
+}
+.calculater-content .control-content .control-btn{
+    height: 40px;
+    line-height: 50px;
+    color:gray;
+}
+.numBtn-item.zero-btn{
+    width: calc(100% / 3 * 2);
+}
+.mdl-radio-list{
+    display: flex;
+    flex-direction: column;
+}
+.mdl-radio-list__item{
+    flex : 0 1 50px;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid rgba(0,0,0,0.1);
+    text-align: center;
+}
+.mdl-radio-list__item.is-selected{
+    background: yellow;
+    color: black;
+}
+.mdl-radio-list__title{
+    padding: 16px;
+}
+.mdl-radio-list__item.is-selected{
+    background: #008595;
+    color: white;
+}

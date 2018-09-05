@@ -1,0 +1,180 @@
+.home-content{
+    background-color: #f7f7f7;
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.home-page{
+    height: 100%;
+    width: 100%;
+    border: solid gray 4px;
+    position: relative;
+    top: 0;
+    left: 0;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    overflow: hidden;
+}
+.userInfo{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+}
+.btn-setting{
+    border: solid gray 4px;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    height: 58px;
+    width: 58px;
+}
+.btn-logout{
+    border: solid gray 4px;
+    position: absolute;
+    bottom: -4px;
+    left: -4px;
+    height: 58px;
+    width: 58px;
+}
+.varsion{
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+}
+.memu-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*flex: 1;*/
+    height:100%;
+    padding: 80px;
+    box-sizing: border-box;
+    
+    transition:all .3s ease-in-out;
+}
+.memu-content.sub-menu-show{
+    padding: 0 80px;
+    /*flex: 0 0 150px;*/
+    height:150px;
+    
+    transform: scale(0.6,0.6);
+}
+.sub-memu-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1024px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    overflow: auto;
+    
+    /*flex: 0 0 0;*/
+    height:0px;
+    transition:height .3s ease-in-out;
+}
+
+.memu-content .menu-item, .sub-memu-content .menu-item{
+    width: 22vh;
+    height: 22vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid gray 4px;
+    position: relative;
+    box-shadow: 0px 12px 8px -8px #9E9E9E;
+    margin: 40px;
+}
+.memu-content .menu-item.is-select{
+    box-shadow: none;
+}
+.sub-memu-content .menu-item{
+    margin: 0px 18px;
+}
+.memu-content .menu-item .menu-icon, .sub-memu-content .menu-item .menu-icon{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:15%;
+    left:25%;
+    height: 50%;
+    width: 50%;
+}
+.memu-content .menu-item .menu-title, .sub-memu-content .menu-item .menu-title{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+.sub-memu-content .menu-item .menu-title{
+    position:static;
+}
+
+.sub-memu-content.sub-menu-show{
+    /*flex: 0 0 450px;*/
+    height:450px;
+}
+.memu-content.sub-menu-show{
+    
+}
+.btn-checkin{
+	position: absolute;
+    top: 80px;
+    left: 15%;
+    height: 58px;
+    width: 200px;
+    background-color:#008595 ;
+    color : white;
+    
+}
+.btn-checkout{
+	position: absolute;
+    top: 150px;
+    left: 15%;
+    height: 58px;
+    width: 200px;
+    background-color:#008595 ;
+    color : white;
+ }
+ .line-top{
+	position:relative;
+	margin-top :58px;
+	border-top: 4px solid #9E9E9E;	
+ }
+ .rdo-lotno{
+	position: relative;
+	left:35%;
+ 	  
+}
+.rdo-carno{
+	position: relative;
+	left:35%;
+   	top:30px;
+   	 
+ }
+.txt-textbox{
+ 	position: relative;
+ 	left:35%;
+  	width:120px;
+  	top:55px;
+ }
+ 
+.btn-confirm{
+	position: relative;
+    top: 80px;
+    left: 35%;
+    height: 30px;
+    width: 120px;
+    background-color:#008595 ;
+    color : white;
+ }

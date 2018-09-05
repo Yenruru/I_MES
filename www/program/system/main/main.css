@@ -1,0 +1,78 @@
+.main-content.kmi-layout-content{
+	background:#f7f7f7;
+}
+.lbl-userno{
+	position:relative;
+	font-size:15px;
+	top:1px;
+	left : 5px;
+}
+.btn-change{
+	font-size:15px;
+	position:absolute;
+	margin:0px auto;
+	height: 24px;
+	text-align:center;
+	line-height:21px;
+	background-color:#db4d3e;
+    color : white;
+    top : 15px;
+	right : 10px;
+}
+.line-top{
+	position:relative;
+	margin-bottom : 15px;
+	border-top: 1px solid #000000;
+}
+.txt-userno{
+	position: absolute;
+	font-size:15;
+	left:90px;
+	top:1px;
+}
+.main-content  .kmi-layout-main-content .border-top{
+	position:absolute;
+	border: 0.75px solid #000000;
+	bottom:20px;
+	width:93%;
+	left :10px;
+}
+.main-content .btn-moin{
+	position:fixed;
+	font-size:15px;
+	text-align:center;
+	line-height:21px;
+	background-color:#db4d3e;
+    color : white;
+	bottom : 0.5px;
+	left : 10px;
+	height: 24px;
+}
+.main-content .btn-moout{
+	position:fixed;
+	font-size:15px;
+	text-align:center;
+	line-height:21px;
+	background-color:#db4d3e;
+    color : white;
+	bottom : 0.5px;
+	height: 24px;
+	left:50%;
+	margin-left:-40px;
+}
+.main-content .btn-Execute{
+	position:fixed;
+	font-size:15px;
+	text-align:center;
+	line-height:21px;
+	background-color:#db4d3e;
+    color : white;
+	bottom : 0.5px;
+	right : 10px;	
+	height: 24px;
+}
+.main-content .btn-test{
+	width:200px;
+	position:absolute;
+	bottom:30px;	
+}

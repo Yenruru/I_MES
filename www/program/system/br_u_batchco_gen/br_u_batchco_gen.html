@@ -1,0 +1,102 @@
+<div ng-init="init();" class="kmi-layout-content br_u_batchco_gen-content"> <!-- 程式代號 -->
+	<!-- 標題列-->
+	
+	<!--<div class="kmi-header-row">
+		<!-- 返回按鈕 -->
+		<!--<div class="kmi-side-btn left" ng-click="change()">
+			<i class="material-icons">&#xE408;</i>
+		</div>
+		<!-- 程式名稱 -->
+		<!--div class="header-title" ng-bind="'execute.execute' | translate"></div>
+		<!-- 左上角的logo -->
+		<!--div class="header-logo"></div>
+	</div>-->
+
+	<!-- 程式內容 (上段) -->
+	<div class = "kmi-layout-main-content">
+		<div class = "kmi-layout-page">
+		
+			<div class=lbl-userno>
+			<label ng-bind="'br_u_batchco_gen.userno' | translate" ></label>
+			<div class=txt-userno ng-bind="userInfo"></div>		
+			</div>
+			
+			<div class="kmi-button btn-change" ng-click="change()" style="width:80px">
+			<label ng-bind="'br_u_batchco_gen.change' | translate" ></label>
+			</div>	
+			
+			<!-- 分隔線 -->
+			<hr class="line-top">
+			
+			
+		    <div class="kmi-text-fields">
+				<!-- 工單 -->
+				<label class="label" ng-bind="'br_u_batchco_gen.mo' | translate"></label>
+				<input class="input" ng-model="mono" readonly="readonly"></input>
+				<!-- 作業區域 -->
+				<label class="label" ng-bind="'br_u_batchco_gen.oparea' | translate"></label>
+				<input class="input" ng-model="oparea" readonly="readonly" ></input>
+			</div>
+		    <div class="kmi-text-fields">
+				<!-- 產品 -->
+				<label class="label" ng-bind="'br_u_batchco_gen.prdno' | translate"></label>
+				<input class="input" ng-model="prdno" readonly="readonly" ></input>
+				<!-- 作業站 -->
+				<label class="label" ng-bind="'br_u_batchco_gen.opno' | translate"></label>
+				<input class="input" ng-model="opno" id='status'  readonly="readonly" ></input>
+			</div>
+			
+			
+			<div class = "border-middle"></div> <!--  分隔線 -->
+			
+		    <div class="kmi-text-fields">
+				<!-- 刷卡區 -->
+				<label class="label" ng-bind="'br_u_batchco_gen.runcard' | translate"></label>
+				<input id ="runcard" class="input-runcard" ng-model="runcard" mdl-barcode="EnterKeyeruncard"></input>					
+			</div>
+			
+			<div class="kmi-text-fields">
+			<!-- 序號/缺點/結果 -->
+				<label class="label-result" ng-bind="'br_u_batchco_gen.result' | translate"></label>			
+			</div>
+			
+			<div class="kmi-text-fields">
+			<!-- 序號 -->
+				<label class="label" ng-bind="'br_u_batchco_gen.snno' | translate"></label>			
+				<input class="input" ng-model="lotno"></input>
+			</div>
+		
+			<div class = "middle-fields-panel">
+			<!-- Table(不良現象) -->
+			<div class="kmi-list tbl-defect">
+				<!-- 標題列 -->
+				<div class="kmi-list__header">
+					<div class="kmi-list__column" style="flex:0.5;text-align:center;font-size:15px;background:#dddddd;border-radius:4px;" ng-bind="'br_u_batchco_gen.defect_code' | translate" ></div>					
+				</div>
+					        
+				<!-- 內容(陣列傳入) -->
+				<div class="kmi-list__row-content" style="padding: 0 0px;width: 50%;">
+					<div class="kmi-list__row" style="background:#ffffff;margin: 6px 0px;align-items: center;" ng-repeat="item in arydefect track by $index" >
+						<div class="kmi-list__column" ng-bind="item.ERRORNO" style="text-align:left;font-size:15px;" ></div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+			<div class="kmi-text-fields">
+				<div class="kmi-button btn-moin" ng-click="moin()" style="width:80px">
+				<label ng-bind="'br_u_batchco_gen.moin' | translate" ></label>
+				</div>			
+				<div class="kmi-button btn-moout" ng-click="moout()" style="width:80px">
+				<label ng-bind="'br_u_batchco_gen.moout' | translate" ></label>
+				</div>
+				<div class="kmi-button btn-Execute" ng-click="execute()" style="width:80px">
+				<label ng-bind="'br_u_batchco_gen.Execute' | translate" ></label>
+				</div>				
+			</div>
+			
+			<div class = "border-bottom"></div> <!--  分隔線 -->
+			
+		</div>	
+	</div>		
+</div>

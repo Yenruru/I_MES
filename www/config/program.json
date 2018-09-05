@@ -1,0 +1,55 @@
+[
+	{
+				"name":"moin",
+				"url":"/moin",
+				"params": {"data":""},
+				"templateUrl"  : "program/system/moin/moin.html",
+	            "controllerUrl": "program/system/moin/moin.js",
+	            "css"          : "program/system/moin/moin.css"
+	},
+
+	{
+				"name":"moout",
+				"url":"/moout",
+				"params": {"data":""},
+				"templateUrl"  : "program/system/moout/moout.html",
+	            "controllerUrl": "program/system/moout/moout.js",
+	            "css"          : "program/system/moout/moout.css"
+	},
+	
+	{
+				"name":"main",
+				"url":"/main",
+				"params": {"data":""},
+				"templateUrl"  : "program/system/main/main.html",
+	            "controllerUrl": "program/system/main/main.js",
+	            "css"          : "program/system/main/main.css"
+	},	
+	
+	{
+				"name":"execute",
+				"url":"/execute",
+				"params": {"data":""},
+				"templateUrl"  : "program/system/execute/execute.html",
+	            "controllerUrl": "program/system/execute/execute.js",
+	            "css"          : "program/system/execute/execute.css"
+	},
+	
+	{
+				"name":"br_u_batchco_gen",
+				"url":"/br_u_batchco_gen",
+				"params": {"data":""},
+				"templateUrl"  : "program/system/br_u_batchco_gen/br_u_batchco_gen.html",
+	            "controllerUrl": "program/system/br_u_batchco_gen/br_u_batchco_gen.js",
+	            "css"          : "program/system/br_u_batchco_gen/br_u_batchco_gen.css"
+	},
+	
+	{
+				"name":"br_u_coassy_asm",
+				"url":"/br_u_coassy_asm",
+				"params": {"data":""},
+				"templateUrl"  : "program/system/br_u_coassy_asm/br_u_coassy_asm.html",
+	            "controllerUrl": "program/system/br_u_coassy_asm/br_u_coassy_asm.js",
+	            "css"          : "program/system/br_u_coassy_asm/br_u_coassy_asm.css"
+	}
+]

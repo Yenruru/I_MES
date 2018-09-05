@@ -1,0 +1,75 @@
+<div ng-init="init();" class="kmi-layout-content">
+    <div class="home-content">
+        <div class="home-page">
+            <div class='userInfo' ng-bind="userInfo"></div>
+            <div class='btn-setting' ng-click="setting();">
+                <div class="kmi-icons" style="background-image: url('image/icons/control.png');">
+                <div class="kmi-can-click"></div> 
+                </div>
+            </div>
+            <div class='btn-logout' ng-click="logout();">
+                <div class="kmi-icons" style="background-image: url('image/icons/logoout.png');">
+                <div class="kmi-can-click"></div>
+                </div>
+                
+                
+            </div>
+            <hr class = "line-top">
+<div>
+<div class = "rdo-lotno">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="0" >
+  <span class="mdl-radio__label">生產批號</span>
+</label>
+</div>
+
+<div class = "rdo-carno">
+<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="0" >
+  <span class="mdl-radio__label">載具編號</span>
+</label>
+</div>
+
+<input class="txt-textbox" >
+
+
+</div>
+
+  			 <button class="btn-confirm" ng-click="checkin();">
+                <label ng-bind="'home.confirm' | translate"></label>
+             </button>
+
+
+
+            <!--  
+              <button class="btn-checkin" ng-click="checkin();">
+                <label ng-bind="'home.checkin' | translate"></label>
+              </button>
+            
+              <button class="btn-checkout" ng-click="checkout();">
+                <label ng-bind="'home.checkout' | translate"></label>
+              </button>
+            -->
+            
+            <div class='varsion' ng-bind="('home.versionInfo' | translate) + version"></div>
+            <div class="memu-content" ng-class="{'sub-menu-show':SubMenuShow}">
+                <div ng-repeat="menuItem in menu | orderBy: 'order' | filter: {isShow : true} track by $index" ng-click="menuClick(menuItem);"
+                    class="menu-item" ng-class="{'is-select' : selectModel == menuItem.name}">
+                    <div class="menu-icon" style="background-image: url('{{menuItem.icon}}');"></div>
+                    <div class="menu-title" ng-bind="menuItem.title | translate"></div>
+                    <div class="kmi-can-click"></div>
+                </div>
+                </div>
+                
+               
+            <div class="sub-memu-content" ng-class="{'sub-menu-show':SubMenuShow}" ng-show="SubMenuShow">
+                <div ng-repeat="menuItem in subMenu | orderBy: 'order' | filter: {isShow : true} track by $index" ng-click="subMenuClick(menuItem);"
+                    class="menu-item">
+                    <div class="menu-icon" style="background-image: url('{{menuItem.icon}}');"></div>
+                    <div class="menu-title" ng-bind-html="menuItem.title | translate"></div>
+                    <div class="kmi-can-click"></div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
